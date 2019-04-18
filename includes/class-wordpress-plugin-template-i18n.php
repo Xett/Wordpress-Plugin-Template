@@ -35,7 +35,7 @@ class Wordpress_Plugin_Template_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'wordpress plugin template',
+			'wordpress-plugin-template',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

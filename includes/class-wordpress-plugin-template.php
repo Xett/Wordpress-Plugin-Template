@@ -67,12 +67,12 @@ class Wordpress_Plugin_Template {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'WORDPRESS PLUGIN TEMPLATE_VERSION' ) ) {
-			$this->version = WORDPRESS PLUGIN TEMPLATE_VERSION;
+		if ( defined( 'WORDPRESS_PLUGIN_TEMPLATE_VERSION' ) ) {
+			$this->version = WORDPRESS_PLUGIN_TEMPLATE_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'wordpress plugin template';
+		$this->plugin_name = 'wordpress-plugin-template';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -103,24 +103,24 @@ class Wordpress_Plugin_Template {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wordpress plugin template-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wordpress-plugin-template-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wordpress plugin template-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wordpress-plugin-template-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wordpress plugin template-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wordpress-plugin-template-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wordpress plugin template-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wordpress-plugin-template-public.php';
 
 		$this->loader = new Wordpress_Plugin_Template_Loader();
 
